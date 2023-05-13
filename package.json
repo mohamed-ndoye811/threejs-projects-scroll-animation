@@ -2,6 +2,9 @@
 	"scripts": {
 		"dev": "parcel index.html"
 	},
+	"alias": {
+		"@": "/"
+	},
 	"devDependencies": {
 		"parcel": "^2.8.3"
 	},
