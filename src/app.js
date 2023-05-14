@@ -18,7 +18,7 @@ let speed = 0,
         dist: 0
     });
 addEventListener('wheel', e => {
-    speed += e.deltaY * 0.0002;
+    speed += e.deltaY * 0.00018;
 });
 
 function raf() {
