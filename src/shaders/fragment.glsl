@@ -12,6 +12,6 @@ varying vec2 vUv;
 void main() {
     vec4 t = texture2D(imgTexture, vUv);
     float bwt = (t.r, t.b, t.g);
-    vec4 black_and_white = vec4(bwt, bwt, bwt, 0.6);
+    vec4 black_and_white = vec4(bwt, bwt, bwt, 0.3);
     gl_FragColor = mix(black_and_white, t, distanceFromCenter);
 }

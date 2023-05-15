@@ -11,10 +11,7 @@ Number.prototype.clamp = function(min, max) {
 let speed = 0,
     position = 0,
     rounded = 0,
-    block = document.getElementById('block'),
-    elems = [...document.querySelectorAll('.line')],
-    elemsWrapper = document.getElementById('lines-wraper'),
-    objects = Array(elems.length).fill({
+    objects = Array(sketch.meshes.length).fill({
         dist: 0
     });
 addEventListener('wheel', e => {
@@ -37,7 +34,7 @@ function raf() {
         sketch.meshes[index].material.uniforms.distanceFromCenter.value = 1 - object.dist;
     })
 
-    rounded = Math.round(position).clamp(0, elems.length - 1);
+    rounded = Math.round(position).clamp(0, objects.length - 1);
     let diff = (rounded - position);
     position += Math.sign(diff) * Math.pow(Math.abs(diff), 0.7) * 0.006;
 
